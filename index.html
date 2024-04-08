@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Charlley</title>
+
+    <style>
+        .container {
+            position: relative;
+            /* Adiciona posicionamento relativo para conter o elemento filho */
+            padding-bottom: 56.25%;
+            /* Proporção de aspecto de 16:9 (calculado como 9 dividido por 16 vezes 100) */
+            height: 0;
+            /* Define a altura como 0 para ocupar menos espaço */
+            overflow: hidden;
+            /* Esconde qualquer conteúdo que possa transbordar */
+        }
+
+        .agenda {
+            position: absolute;
+            /* Define posicionamento absoluto para cobrir a área do contêiner */
+            top: 0;
+            left: 0;
+            width: 100%;
+            /* Ocupa toda a largura */
+            height: 100%;
+            /* Ocupa toda a altura */
+        }
+
+        @media screen and (max-width: 600px) {
+            .container {
+                padding-bottom: 150%;
+                /* Ajusta a proporção de aspecto para dispositivos menores */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <iframe class="agenda"
+            src="https://calendar.google.com/calendar/embed?src=c3e1b0f962324a7185b84908a1a8ee2ce6737371b6938f9cc738f3c5fefc8d16%40group.calendar.google.com&ctz=America%2FSao_Paulo"
+            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </div>
+</body>
+
+</html>
